@@ -1,38 +1,38 @@
-export const columns = [
+export const tableData = [
   {
-    accessorKey: 'firstName',
-    header: 'First Name',
+    columnHeading: 'First Name',
+    columnKey: 'firstName',
   },
   {
-    accessorKey: 'lastName',
-    header: 'Last Name',
+    columnHeading: 'Last Name',
+    columnKey: 'lastName',
   },
   {
-    accessorKey: 'maidenName',
-    header: 'Maiden Name',
+    columnHeading: 'Maiden Name',
+    columnKey: 'maidenName',
   },
   {
-    accessorKey: 'age',
-    header: 'Age',
+    columnHeading: 'Age',
+    columnKey: 'age',
   },
   {
-    accessorKey: 'gender',
-    header: 'Gender',
+    columnHeading: 'Gender',
+    columnKey: 'gender',
   },
   {
-    accessorKey: 'email',
-    header: 'Email',
+    columnHeading: 'Email',
+    columnKey: 'email',
   },
   {
-    accessorKey: 'username',
-    header: 'Username',
+    columnHeading: 'Username',
+    columnKey: 'username',
   },
   {
-    accessorKey: 'bloodGroup',
-    header: 'Blood Group',
+    columnHeading: 'Blood group',
+    columnKey: 'bloodGroup',
   },
   {
-    accessorKey: 'eyeColor',
-    header: 'Eye Color',
+    columnHeading: 'Eye color',
+    columnKey: 'eyeColor',
   },
 ];
