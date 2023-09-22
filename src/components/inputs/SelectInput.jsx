@@ -3,14 +3,16 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import useData from '../../hooks/useData';
 // import * as React from 'react';
 
 export default function SelectInput() {
+  const { setItemsPerPage } = useData();
   //   const [age, setAge] = React.useState('');
 
-  //   const handleChange = (event) => {
-  //     setAge(event.target.value);
-  //   };
+  const handleChange = (event) => {
+    setItemsPerPage(event.target.value);
+  };
 
   return (
     <Box>
@@ -21,7 +23,7 @@ export default function SelectInput() {
           id='demo-simple-select'
           //   value={entries}
           label='entries'
-          //   onChange={handleChange}
+          onChange={handleChange}
         >
           <MenuItem value={5}>5</MenuItem>
           <MenuItem value={10}>10</MenuItem>
