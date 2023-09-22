@@ -9,6 +9,10 @@ const Products = () => {
   const { data: tableData, loading, error } = useFetch(apiUrl);
   const tableInfo = [
     {
+      columnHeading: 'Thumb',
+      columnKey: 'thumbnail',
+    },
+    {
       columnHeading: 'Title',
       columnKey: 'title',
     },
@@ -35,10 +39,6 @@ const Products = () => {
     {
       columnHeading: 'Category',
       columnKey: 'category',
-    },
-    {
-      columnHeading: 'Thumb',
-      columnKey: 'thumbnail',
     },
     {
       columnHeading: 'Stock',

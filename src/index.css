@@ -198,3 +198,9 @@ tbody tr:nth-child(even) {
   background-color: blue; /* Change the background color for the selected page */
   color: white; /* Change the text color for the selected page */
 }
+.tableThumbImg {
+  display: block;
+  border-radius: 10px;
+  max-width: 220px;
+  object-fit: cover;
+}

@@ -61,7 +61,17 @@ const Table = ({ tableData, tableInfo }) => {
               {dataItem?.map((item, index) => (
                 <tr key={index}>
                   {tableInfo.map((key, index) => (
-                    <td key={index}>{item[key.columnKey]}</td>
+                    <td key={index}>
+                      {key.columnKey === 'thumbnail' ? (
+                        <img
+                          src={item[key.columnKey]}
+                          alt={item[key.columnHeading]}
+                          className="tableThumbImg"
+                        />
+                      ) : (
+                        item[key.columnKey]
+                      )}
+                    </td>
                   ))}
                 </tr>
               ))}
