@@ -3,9 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 const Breadcrumb = () => {
   const location = useLocation();
   const path = location.pathname;
-  console.log(location);
   return (
-    <ul className='breadcrumb'>
+    <ul className="breadcrumb">
       <li>
         <Link to={'/'}>Home</Link>
       </li>

@@ -6,8 +6,8 @@ export const DataContext = createContext(null);
 // eslint-disable-next-line react/prop-types
 const DataProvider = ({ children }) => {
   const [searchInput, setSearchInput] = useState('');
-  const [itemsPerPage, setItemsPerPage] = useState(10);
-  const [pageIndex, setPageIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(5);
+  const [pageIndex, setPageIndex] = useState(1);
   const [totalPages, setTotalPages] = useState();
 
   const values = {

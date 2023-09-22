@@ -11,7 +11,9 @@ const useFetch = (url) => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`${url}?limit=${itemsPerPage}&skip=${pageIndex * itemsPerPage}`)
+      .get(
+        `${url}?limit=${itemsPerPage}&skip=${(pageIndex - 1) * itemsPerPage}`
+      )
       .then((res) => {
         setLoading(false);
 

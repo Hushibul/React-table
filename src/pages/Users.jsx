@@ -1,13 +1,12 @@
 import Table from '../components/Table';
 import Breadcrumb from '../components/breadcrumb/Breadcrumb';
-import Filter from '../components/filter/Filter';
 import PaginationRounded from '../components/pagination/Pagination';
 import useFetch from '../hooks/useFetch';
+import Loading from '../loading/Loading';
 
 const Users = () => {
   const apiUrl = 'https://dummyjson.com/users';
   const { data: userData, loading, error } = useFetch(apiUrl);
-  console.log(userData);
   const tableInfo = [
     {
       columnHeading: 'First Name',
@@ -51,12 +50,13 @@ const Users = () => {
     return (
       <>
         <Breadcrumb />
-        <Filter />
-        <Table tableInfo={tableInfo} userData={userData} />
+        <Table tableInfo={tableInfo} tableData={userData?.users} />
         <PaginationRounded />
       </>
     );
     // return <h1>users</h1>;
+  } else {
+    return <Loading></Loading>;
   }
 };
 
