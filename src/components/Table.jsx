@@ -31,6 +31,12 @@ const Table = ({ tableData, tableInfo }) => {
     );
     setDataItem(updatedList);
   };
+  const resetFilter = () => {
+    // Reset the filter and load the original data when the search input loses focus
+    setDataItem(tableData);
+    // Reset the input field value
+    searchInput.current.value = '';
+  };
 
   return (
     <Box>
@@ -43,6 +49,7 @@ const Table = ({ tableData, tableInfo }) => {
             placeholder="Search..."
             ref={searchInput}
             onChange={changeHandler}
+            onBlur={resetFilter}
           />
           <SearchIcon className="search-btn" />
         </div>
