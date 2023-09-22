@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import useData from './useData';
 
 const useFetch = (url) => {
-  const { itemsPerPage, pageIndex } = useData();
+  const { itemsPerPage, pageIndex, setTotalPages } = useData();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -16,13 +16,14 @@ const useFetch = (url) => {
         setLoading(false);
 
         res?.data && setData(res?.data);
+        setTotalPages(res?.data?.total / res?.data?.limit);
       })
       .catch((err) => {
         setLoading(false);
 
         err?.message && setError(err);
       });
-  }, [url, itemsPerPage, pageIndex]);
+  }, [url, itemsPerPage, pageIndex, setTotalPages]);
 
   return { data, loading, error };
 };

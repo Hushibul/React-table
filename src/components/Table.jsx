@@ -2,8 +2,6 @@
 // import { tableData } from '../constants/constant';
 
 const Table = ({ userData, tableInfo }) => {
-  console.log('User Data', userData);
-  console.log('table info:', tableInfo);
   return (
     <div className='wrapper'>
       <div className='table-container'>

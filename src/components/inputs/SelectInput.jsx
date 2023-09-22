@@ -7,7 +7,7 @@ import useData from '../../hooks/useData';
 // import * as React from 'react';
 
 export default function SelectInput() {
-  const { setItemsPerPage } = useData();
+  const { itemsPerPage, setItemsPerPage } = useData();
   //   const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
@@ -21,7 +21,7 @@ export default function SelectInput() {
         <Select
           labelId='demo-simple-select-label'
           id='demo-simple-select'
-          //   value={entries}
+          value={itemsPerPage}
           label='entries'
           onChange={handleChange}
         >

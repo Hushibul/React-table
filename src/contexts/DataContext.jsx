@@ -7,7 +7,8 @@ export const DataContext = createContext(null);
 const DataProvider = ({ children }) => {
   const [searchInput, setSearchInput] = useState('');
   const [itemsPerPage, setItemsPerPage] = useState(10);
-  const [pageIndex, setPageIndex] = useState(1);
+  const [pageIndex, setPageIndex] = useState(0);
+  const [totalPages, setTotalPages] = useState();
 
   const values = {
     searchInput,
@@ -16,6 +17,8 @@ const DataProvider = ({ children }) => {
     setItemsPerPage,
     pageIndex,
     setPageIndex,
+    totalPages,
+    setTotalPages,
   };
 
   return <DataContext.Provider value={values}>{children}</DataContext.Provider>;
