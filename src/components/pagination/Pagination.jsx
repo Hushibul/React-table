@@ -10,13 +10,16 @@ export default function PaginationRounded() {
     console.log('Clicked Page:', page);
   };
   return (
-    <Stack spacing={2}>
-      <Pagination
-        count={10}
-        shape='rounded'
-        page={pageIndex}
-        onChange={handlePageChange}
-      />
-    </Stack>
+    <div className='pagination-stack'>
+      <Stack className='pagination-stack' spacing={2}>
+        <Pagination
+          className='custom-pagination'
+          count={10}
+          shape='rounded'
+          page={pageIndex}
+          onChange={handlePageChange}
+        />
+      </Stack>
+    </div>
   );
 }

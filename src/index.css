@@ -72,18 +72,18 @@ body {
 }
 
 .search-btn {
-  color: #e84118;
+  color: black;
   float: right;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #ebebeb;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.4s;
   cursor: pointer;
   text-decoration: none;
+  margin-top: 8px;
 }
 .search-btn > i {
   font-size: 30px;
@@ -172,4 +172,28 @@ tbody tr:nth-child(even) {
     width: 303px;
     overflow-x: auto;
   }
+}
+
+.pagination-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 10px;
+}
+
+.custom-pagination {
+  justify-content: center; /* Center the pagination items horizontally */
+  margin: auto;
+}
+
+/* Customize the pagination button styles */
+.custom-pagination .MuiPaginationItem-page {
+  color: black;
+  font-weight: 600;
+  /* Change the text color */
+}
+
+.custom-pagination .Mui-selected {
+  background-color: blue; /* Change the background color for the selected page */
+  color: white; /* Change the text color for the selected page */
 }
