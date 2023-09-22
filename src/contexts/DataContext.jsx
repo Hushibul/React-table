@@ -7,7 +7,7 @@ export const DataContext = createContext(null);
 const DataProvider = ({ children }) => {
   const [searchInput, setSearchInput] = useState('');
   const [itemsPerPage, setItemsPerPage] = useState(10);
-  const [pageIndex, setPageIndex] = useState(0);
+  const [pageIndex, setPageIndex] = useState(1);
 
   const values = {
     searchInput,
